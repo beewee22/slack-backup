@@ -1,10 +1,12 @@
 name: create-release
-
 on:
   push:
     tags:
       - v*
-
+  workflow_run:
+    workflows: [bump-tag]
+    types:
+      - completed
 jobs:
   build:
     permissions: write-all
