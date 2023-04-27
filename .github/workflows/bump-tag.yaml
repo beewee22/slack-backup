@@ -6,6 +6,7 @@ on:
 
 jobs:
   bump-and-tag:
+    permissions: write-all
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     name: Bump and Tag
